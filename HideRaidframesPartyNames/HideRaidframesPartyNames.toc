@@ -1,0 +1,6 @@
+## Interface: 90005
+## Title: |cff00c0ffHideRaidframesPartyNames|r
+## Author: Eskydar
+## Version: 1.0.1
+## SavedVariablesPerCharacter: HPN_SHOW_PARTY
+core.lua
