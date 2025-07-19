@@ -22,9 +22,9 @@ local function ColorText(text, color)
 end
 
 -- 5.4.8兼容的超链接函数
-local function MakeLink(text, id)
-    return format("|H%s|h%s|h", id, text)
-end
+--local function MakeLink(text, id)
+    --return format("|H%s|h%s|h", id, text)
+--end
 
 -- 核心名字切换函数（5.4.8兼容）
 local function ToggleName(frame)
@@ -80,9 +80,9 @@ function f:OnEvent(event, arg1)
         
     elseif event == "PLAYER_ENTERING_WORLD" then
         -- 确保UI加载完成后再处理
-        C_Timer.After(2, function()
-            ProcessFrames()
-        end)
+       -- C_Timer.After(2, function()
+           -- ProcessFrames()
+        --end)
     end
 end
 
@@ -120,16 +120,16 @@ SLASH_HIDEPARTYNAME1 = "/hrpn"
 SlashCmdList["HIDEPARTYNAME"] = ProcessCommands
 
 -- 5.4.8兼容的超链接处理
-local SetHyperlink = ItemRefTooltip.SetHyperlink
-function ItemRefTooltip:SetHyperlink(link, ...)
-    if link and link:sub(1, 8) == "myXghkkL" then
-        CallToggleEvent()
-    else
-        SetHyperlink(self, link, ...)
-    end
-end
+--local SetHyperlink = ItemRefTooltip.SetHyperlink
+--function ItemRefTooltip:SetHyperlink(link, ...)
+    --if link and link:sub(1, 8) == "myXghkkL" then
+      --  CallToggleEvent()
+    --else
+   --     SetHyperlink(self, link, ...)
+   -- end
+--end
 
 -- 初始处理
-C_Timer.After(3, function()
-    ProcessFrames()
-end)
+--C_Timer.After(3, function()
+   --- ProcessFrames()
+--end)
